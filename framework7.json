@@ -1,0 +1,89 @@
+{
+  "cwd": "D:\\_Trv\\AreenCUBs\\Sharing\\Wasalni",
+  "type": [
+    "capacitor",
+    "pwa"
+  ],
+  "name": "Wasalni",
+  "framework": "svelte",
+  "template": "split-view",
+  "bundler": "vite",
+  "cssPreProcessor": "less",
+  "theming": {
+    "customColor": true,
+    "color": "yellow",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": true,
+  "customBuildConfig": {
+    "rtl": false,
+    "darkTheme": true,
+    "lightTheme": true,
+    "themes": [
+      "ios",
+      "md"
+    ],
+    "components": [
+      "dialog",
+      "popup",
+      "login-screen",
+      "popover",
+      "actions",
+      "sheet",
+      "toast",
+      "preloader",
+      "progressbar",
+      "sortable",
+      "swipeout",
+      "accordion",
+      "contacts-list",
+      "virtual-list",
+      "list-index",
+      "timeline",
+      "tabs",
+      "panel",
+      "card",
+      "chip",
+      "form",
+      "input",
+      "checkbox",
+      "radio",
+      "toggle",
+      "range",
+      "stepper",
+      "smart-select",
+      "grid",
+      "calendar",
+      "picker",
+      "infinite-scroll",
+      "pull-to-refresh",
+      "data-table",
+      "fab",
+      "searchbar",
+      "messages",
+      "messagebar",
+      "swiper",
+      "photo-browser",
+      "notification",
+      "autocomplete",
+      "tooltip",
+      "gauge",
+      "skeleton",
+      "color-picker",
+      "treeview",
+      "text-editor",
+      "area-chart",
+      "pie-chart",
+      "breadcrumbs",
+      "typography"
+    ]
+  },
+  "pkg": "io.areencubs.wasalni",
+  "capacitor": {
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
