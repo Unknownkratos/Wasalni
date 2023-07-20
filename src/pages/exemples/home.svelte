@@ -1,6 +1,6 @@
 <Page name="home">
   <!-- Top Navbar -->
-  <Navbar large sliding={false}>
+  <Navbar large sliding={false} >
     <NavLeft>
       <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" />
     </NavLeft>

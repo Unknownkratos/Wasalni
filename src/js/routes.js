@@ -7,7 +7,11 @@ import Bus from '../pages/left-Menu/BusSchedule.svelte';
 import Train from '../pages/left-Menu/TrainSchedule.svelte';
 import FAQ from '../pages/left-Menu/FAQ.svelte';
 import Settings from '../pages/left-Menu/Settings.svelte';
-
+import SignUp from '../pages/main/signUp.svelte';
+import Verifcation from '../pages/main/verification.svelte';
+import Enter from '../pages/main/enter.svelte';
+import Userform from '../pages/main/user/user_form.svelte';
+import Taxiform from '../pages/main/taxi/taxi_form.svelte';
 
 
 
@@ -16,11 +20,13 @@ import Settings from '../pages/left-Menu/Settings.svelte';
 import AboutPage from '../pages/exemples/about.svelte';
 import FormPage from '../pages/exemples/form.svelte';
 
+
 import LeftPage1 from '../pages/exemples/left-page-1.svelte';
 import LeftPage2 from '../pages/exemples/left-page-2.svelte';
 import DynamicRoutePage from '../pages/exemples/dynamic-route.svelte';
 import RequestAndLoad from '../pages/exemples/request-and-load.svelte';
 import NotFoundPage from '../pages/404.svelte';
+
 
 
 import HomeCustomer from '../pages/taxi/homeCustomer.svelte';
@@ -63,8 +69,8 @@ var routes = [
     path: '/taxi/HomeCustomer/',
     component: HomeCustomer,
   },
-  
-  
+
+
   {
     path: '/',
     component: HomePage,
@@ -81,6 +87,26 @@ var routes = [
   {
     path: '/left-page-1/',
     component: LeftPage1,
+  },
+  {
+    path: '/signup/',
+    component: SignUp,
+  },
+  {
+    path: '/verification/',
+    component: Verifcation,
+  },
+  {
+    path: '/enter/',
+    component: Enter,
+  },
+  {
+    path: '/userform/',
+    component: Userform,
+  },
+  {
+    path: '/taxiform/',
+    component: Taxiform,
   },
   {
     path: '/left-page-2/',

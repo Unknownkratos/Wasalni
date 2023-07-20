@@ -1,17 +1,20 @@
-<Page name="homeCustomer">
+<Page name="homeDriver"  bgColor="white" ><!-- bgColor="lightblue"  -->
   <!-- Top Navbar -->
-  <WasalniNavBar />
+  <WasalniNavBar  />
   <Fab position="center-bottom" text="Wasalni" color = "yellow">
     <Icon ios="f7:add" md="material:add" />
 </Fab>
 
-  <!-- Page content -->
+  <!-- Page content --><br><br>
   
+  <WelcomePage />
+  
+
 </Page>
 
 <script>
   import WasalniNavBar from '../essentials/fixNavbar.svelte';
-
+  import  WelcomePage from '../main/welcome.svelte';
   import {
     f7,
     Page,
@@ -30,7 +33,8 @@
     Tabs,
     Tab,
     Fab,
-    Icon,
+    Icon
+
     
   } from 'framework7-svelte';
 
@@ -38,6 +42,6 @@
 
   onMount(() => {
     // output current route data
-    console.log(f7route); // -> { url: '/foo/', query: { id: 3 }, ... }
+     // -> { url: '/foo/', query: { id: 3 }, ... }     
   });
 </script>

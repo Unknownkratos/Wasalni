@@ -1,12 +1,62 @@
 <Page>
-  <Navbar title="About" backLink="Back" />
-  <BlockTitle>About My App</BlockTitle>
-  <Block>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestiae laudantium dignissimos est nobis delectus nemo ea alias voluptatum architecto, amet similique, saepe iste consectetur in repellat ut minus quibusdam!</p>
-    <p>Molestias et distinctio porro nesciunt ratione similique, magni doloribus, rerum nobis, aliquam quae reiciendis quasi modi. Nam a recusandae, fugiat in ea voluptates fuga eius, velit corrupti reprehenderit dignissimos consequatur!</p>
-    <p>Blanditiis, cumque quo adipisci. Molestiae, dolores dolorum quos doloremque ipsa ullam eligendi commodi deserunt doloribus inventore magni? Ea mollitia veniam nostrum nihil, iusto doloribus a at! Ea molestiae ullam delectus!</p>
-  </Block>
+  <Navbar title="Famous Questions" backLink="Back" />
+  
+  <div class="inline-container-header">
+    <Icon f7="question_circle" style="margin-top: 15px;"></Icon> 
+    <BlockTitle>FAQ</BlockTitle>
+  </div>  
+
+  <BlockTitle>Most Frequently Asked Question</BlockTitle>
+  <List strong outlineIos dividersIos insetMd accordionList accordionOpposite>
+    <ListItem accordionItem title="Drivers not answering?">
+      <AccordionContent>
+        <Block>
+          <p>
+            If the driver does not respond to your ride request:<br>
+            Try increasing the price of the flight,and then submit your request again.<br>
+            Keep in mind that drivers are busier during rush hour?<br>
+            So expect to pay more for the flight.
+          </p>
+        </Block>
+      </AccordionContent>
+    </ListItem>
+
+    <ListItem accordionItem title="How can I file a complaint?">
+      <AccordionContent>
+        <Block>
+          <p>
+            If you do not enjoy your trip or if you have a conflict with the driver, write to us:<br>
+            open a chat with support via the side menu.
+          </p>
+        </Block>
+      </AccordionContent>
+    </ListItem>
+
+    <ListItem accordionItem title="How do I find my forgotten belongings?">
+      <AccordionContent>
+        <Block>
+          <p>
+            If you forgotten your  belongings:<br>
+            send the support team a ticket and mention some informations about the tour.
+          </p>
+        </Block>
+      </AccordionContent>
+    </ListItem>
+
+    </List>
+
+
+
+
 </Page>
 <script>
-  import { Page, Navbar, Block, BlockTitle } from 'framework7-svelte';
+  import { Page, Navbar, Block, BlockTitle,Icon,List , ListItem,AccordionContent  } from 'framework7-svelte';
 </script>
+<style>
+  .inline-container-header {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-left: 10px;
+    }
+</style>
