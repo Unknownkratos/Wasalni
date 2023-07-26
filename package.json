@@ -11,7 +11,9 @@
     "build": "cross-env NODE_ENV=production vite build && npx workbox generateSW workbox-config.js",
     "build-capacitor-ios": "cross-env NODE_ENV=production vite build && npx cap copy ios",
     "build-capacitor-android": "cross-env NODE_ENV=production vite build && npx cap copy android",
-    "postinstall": "cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/"
+    "postinstall": "cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "browserslist": [
     "IOS >= 15",
@@ -20,7 +22,7 @@
     "last 5 Firefox versions"
   ],
   "dependencies": {
-    "@capacitor/android": "^5.1.1",
+    "@capacitor/android": "5.1.1",
     "@capacitor/app": "^5.0.5",
     "@capacitor/browser": "^5.0.5",
     "@capacitor/core": "^5.1.1",

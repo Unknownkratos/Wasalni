@@ -1,16 +1,13 @@
 <!-- Top Navbar -->
 <!--  colorTheme="yellow" color='yellow' bgColor="yellow" borderTheme='yellow'  rippleColor="yellow"  -->
     
-    <Toolbar sliding={false} bgColor="yellow" >
+    <!-- <Toolbar sliding={false} style = "background-color:hsl(211, 78%, 23%)" >
         
             <NavLeft>
-                <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left"/>
+                <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" style = "color:white"/>
             </NavLeft>
-            <NavTitleLarge>Wasalni</NavTitleLarge>
-            <NavRight>
-                <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="right" />
-            </NavRight>
-    </Toolbar>
+            <NavTitleLarge  style="color: white; left: 128px;" >Wasalni</NavTitleLarge>
+    </Toolbar> -->
 
 <script>
 import {

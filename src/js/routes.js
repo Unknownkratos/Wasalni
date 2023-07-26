@@ -12,6 +12,11 @@ import Verifcation from '../pages/main/verification.svelte';
 import Enter from '../pages/main/enter.svelte';
 import Userform from '../pages/main/user/user_form.svelte';
 import Taxiform from '../pages/main/taxi/taxi_form.svelte';
+import Taxiform1 from '../pages/main/taxi/form.svelte';
+import Startup from '../pages/main/user/start.svelte';
+
+
+
 
 
 
@@ -33,6 +38,14 @@ import HomeCustomer from '../pages/taxi/homeCustomer.svelte';
 import HomeDriver from '../pages/taxi/homeDriver.svelte';
 
 var routes = [
+  {
+    path: '/start/',
+    component: Startup,
+  },
+  {
+    path: '/form/',
+    component: Taxiform1,
+  },
   {
     path: '/FAQ/',
     component: FAQ,

@@ -1,0 +1,7 @@
+{
+  "name": "wasalni",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
