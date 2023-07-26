@@ -103,7 +103,7 @@
                 raised
                 bgColor="blue"
                 color="white"
-                href="/enter/"
+                
               >Continue</Button
             >
         {/if}

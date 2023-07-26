@@ -25,6 +25,7 @@
 
     <List strongIos dividersIos insetIos>
         <ListInput
+            
             outline
             label="Phone"
             floatingLabel
@@ -32,7 +33,7 @@
             placeholder="Your phone number"
             clearButton
             on:change={continueHandler}
-            
+          
             bind:value={num}
            
         >
