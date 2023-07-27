@@ -1,19 +1,10 @@
-<Page name="homeDriver"  bgColor="white" ><!-- bgColor="lightblue"  -->
-  <!-- Top Navbar -->
-  <WasalniNavBar  />
- 
-
-  <!-- Page content --><br><br>
-  
-  <Welcome/>
-  
-
-</Page>
-
+<!-- homeDriver.svelte -->
 <script>
   import WasalniNavBar from '../essentials/fixNavbar.svelte';
-  import  WelcomePage from '../main/welcome.svelte';
+  import WelcomePage from '../main/welcome.svelte';
   import Formtaxi from '../main/taxi/form.svelte';
+  import Welcome from '../main/welcome.svelte';
+  import Start from '../main/user/start.svelte';
   import {
     f7,
     Page,
@@ -33,17 +24,20 @@
     Tab,
     Fab,
     Icon
-
-    
   } from 'framework7-svelte';
 
-  import { onMount } from 'svelte';
-    import IdentityVerf from '../main/taxi/IdentityVerf.svelte';
-    import Welcome from '../main/welcome.svelte';
-    import Start from '../main/user/start.svelte';
-
-  onMount(() => {
-    // output current route data
-     // -> { url: '/foo/', query: { id: 3 }, ... }     
-  });
+  import IdentityVerf from '../main/taxi/IdentityVerf.svelte';
+  import Map from './Maptry.svelte';
+    import Maptry from './Maptry.svelte';
 </script>
+
+<Page name="homeDriver" bgColor="white">
+  <!-- Top Navbar -->
+  <WasalniNavBar />
+
+  <!-- Page content -->
+  <br /><br />
+  <Welcome/>
+  <!-- <Map /> -->
+</Page>
+

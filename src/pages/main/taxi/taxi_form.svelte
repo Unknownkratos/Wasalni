@@ -19,7 +19,7 @@
     let license_number = "";
     let taxi_number = "";
     let id_number = "";
-    let isTaxiCarOwner = false;
+    let isTaxiCarOwner = true;
 
     function handleToggleChange (event) {
         isTaxiCarOwner = ! isTaxiCarOwner;
