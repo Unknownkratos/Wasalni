@@ -32,6 +32,9 @@
     import Maptry from './Maptry.svelte';
     import Logintest from './logintest.svelte';
     import Login from '../main/login.svelte';
+  import TripConfig from '../main/user/trip_config.svelte';
+  import TaxiLicense from '../main/taxi/taxi_license.svelte';
+  import PrimaryInfo from '../main/taxi/primary_info.svelte';
 </script>
 
 <Page name="homeDriver" bgColor="white">
