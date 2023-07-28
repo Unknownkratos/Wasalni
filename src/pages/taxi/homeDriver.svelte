@@ -5,6 +5,7 @@
   import Formtaxi from '../main/taxi/form.svelte';
   import Welcome from '../main/welcome.svelte';
   import Start from '../main/user/start.svelte';
+  import logint from './logintest.svelte';
   import {
     f7,
     Page,
@@ -29,6 +30,8 @@
   import IdentityVerf from '../main/taxi/IdentityVerf.svelte';
   import Map from './Maptry.svelte';
     import Maptry from './Maptry.svelte';
+    import Logintest from './logintest.svelte';
+    import Login from '../main/login.svelte';
 </script>
 
 <Page name="homeDriver" bgColor="white">
@@ -37,7 +40,7 @@
 
   <!-- Page content -->
   <br /><br />
-  <Welcome/>
-  <!-- <Map /> -->
+  <!-- <Welcome/> -->
+  <Maptry/>
 </Page>
 
