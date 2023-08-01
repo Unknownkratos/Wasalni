@@ -19,14 +19,16 @@
     Fab,
     Icon,
   } from "framework7-svelte";
+
+  import { onMount } from "svelte";
+  import { afterUpdate } from "svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
-  // import ShowNavBar from "../essentials/showNavbar.sveltesvelte";
   import WelcomePage from "../main/welcome.svelte";
   import Formtaxi from "../main/taxi/form.svelte";
   import Welcome from "../main/welcome.svelte";
   import Start from "../main/user/start.svelte";
   import Panel from "../main/PanelLeft.svelte";
- import { page } from "../essentials/showNavbar.svelte";
+  import { page } from "../essentials/showNavbar.svelte";
   import logint from "./logintest.svelte";
   import IdentityVerf from "../main/taxi/IdentityVerf.svelte";
   import Map from "./Maptry.svelte";
@@ -39,6 +41,26 @@
   import FixNavbar from "../essentials/fixNavbar.svelte";
   import Enter from "../main/enter.svelte";
   import DBConnect from "../essentials/dbconnect.svelte";
+
+  let currentPage = "Start";
+
+  // onMount(() => {
+  //   // After 5 seconds, switch to Page2
+  //   setTimeout(() => {
+  //     currentPage = "Welcome";
+  //   }, 5000);
+  // });
+  async function changePage() {
+    // Wait for 3 seconds
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    currentPage = "Welcome";
+  }
+
+  afterUpdate(() => {
+    // Add any post-update logic here if needed
+    changePage();
+  });
 </script>
 
 <Page name="homeDriver" bgColor="white">
@@ -49,9 +71,19 @@
     <Fab position="center-bottom" text="Wasalni" color="yellow">
       <Icon ios="f7:add" md="material:add" />
     </Fab>
-    <Login />
+    <!-- <Start /> -->
+    <!-- <svelte:component this={currentPage} /> -->
+    {#if currentPage === "Start"}
+      <Start />
+    {:else}
+      <Welcome />
+    {/if}
   </div>
 </Page>
+
+<!-- <main>
+  <svelte:component this={[currentPage]} />
+</main> -->
 
 <style>
   #app {

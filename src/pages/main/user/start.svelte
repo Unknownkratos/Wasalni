@@ -1,5 +1,5 @@
 <script>
-  import { Page, Navbar, Block, Button } from 'framework7-svelte';
+  import { Page, Navbar, Block, Button } from "framework7-svelte";
   let showButtons = false;
 
   function toggleButtons() {
@@ -7,28 +7,35 @@
   }
 </script>
 
-<Page style="background-color: hsl(48, 85%, 50%); display: flex;
+<Page
+  style="background-color: hsl(48, 85%, 50%); display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;">
+justify-content: center;"
+>
   <!-- Loader Animation -->
   {#if !showButtons}
     <div class="loader">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <div class="bar4"></div>
-      <div class="bar5"></div>
-      <div class="bar6"></div>
+      <div class="bar1" />
+      <div class="bar2" />
+      <div class="bar3" />
+      <div class="bar4" />
+      <div class="bar5" />
+      <div class="bar6" />
     </div>
   {/if}
 
-  <Block inset outlineIos class="center" style="display: flex;
+  <Block
+    inset
+    outlineIos
+    class="center"
+    style="display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;">
+  flex-wrap: nowrap;"
+  >
     <img
       id="logo"
       src="img/logo.svg"
@@ -45,15 +52,11 @@ justify-content: center;">
 
   <Block>
     {#if showButtons}
-    <div>
-      <!-- Your Buttons or other content here -->
-      <Button raised tonal outline round iconF7="ticket_fill">
-        Bus
-      </Button>
-      <Button raised tonal outline round iconF7="tram_fill">
-        Train
-      </Button>
-    </div>
+      <div>
+        <!-- Your Buttons or other content here -->
+        <Button raised tonal outline round iconF7="ticket_fill">Bus</Button>
+        <Button raised tonal outline round iconF7="tram_fill">Train</Button>
+      </div>
     {/if}
     <br />
   </Block>
@@ -85,14 +88,14 @@ justify-content: center;">
   }
 
   .loader .bar1 {
-    background-color:hsl(211, 78%, 23%);
+    background-color: hsl(211, 78%, 23%);
   }
   .loader .bar2 {
     background-color: hsl(211, 78%, 23%);
     animation-delay: -0.7s;
   }
   .loader .bar3 {
-    background-color:hsl(211, 78%, 23%);
+    background-color: hsl(211, 78%, 23%);
     animation-delay: -0.6s;
   }
   .loader .bar4 {
@@ -104,7 +107,7 @@ justify-content: center;">
     animation-delay: -0.4s;
   }
   .loader .bar6 {
-    background-color:hsl(211, 78%, 23%);
+    background-color: hsl(211, 78%, 23%);
     animation-delay: -0.3s;
   }
 
