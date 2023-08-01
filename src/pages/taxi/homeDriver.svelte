@@ -49,7 +49,7 @@
     <Fab position="center-bottom" text="Wasalni" color="yellow">
       <Icon ios="f7:add" md="material:add" />
     </Fab>
-    <Maptry />
+    <Login />
   </div>
 </Page>
 

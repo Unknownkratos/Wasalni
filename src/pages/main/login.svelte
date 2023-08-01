@@ -1,5 +1,4 @@
 <script >
-  import { isConnected } from '../store/connected.svelte';
   // Login screen demo data
   let username = '';
   let password = '';
