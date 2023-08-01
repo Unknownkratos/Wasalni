@@ -20,12 +20,6 @@
   <View>
     <Page>
       <Navbar title="Left Panel"  />
-      <BlockTitle>Left View Navigation</BlockTitle>
-      <List>
-        <ListItem link="/left-page-1/" title="Left Page 1" />
-        <ListItem link="/left-page-2/" title="Left Page 2"/>
-      </List>
-      <BlockTitle>Control Main View</BlockTitle>
       <List>
         
         <ListItem link="/Account/" view=".view-main" panelClose title="Account"/>

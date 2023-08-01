@@ -1,16 +1,5 @@
-<!-- Top Navbar -->
-<!--  colorTheme="yellow" color='yellow' bgColor="yellow" borderTheme='yellow'  rippleColor="yellow"  -->
-    
-    <!-- <Toolbar sliding={false} style = "background-color:hsl(211, 78%, 23%)" >
-        
-            <NavLeft>
-                <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" style = "color:white"/>
-            </NavLeft>
-            <NavTitleLarge  style="color: white; left: 128px;" >Wasalni</NavTitleLarge>
-    </Toolbar> -->
-
 <script>
-import {
+  import {
     Toolbar,
     Navbar,
     NavLeft,
@@ -18,6 +7,15 @@ import {
     NavTitleLarge,
     NavRight,
     Link,
-    
-} from 'framework7-svelte';
+  } from "framework7-svelte";
+
+  const page = true;
 </script>
+
+<Toolbar sliding={false} bgColor="yellow">
+  <NavLeft>
+    <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" />
+  </NavLeft>
+  <NavTitleLarge>Wasalni</NavTitleLarge>
+  <NavRight />
+</Toolbar>

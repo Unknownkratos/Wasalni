@@ -8,6 +8,7 @@
     Button,
     Link,
   } from "framework7-svelte";
+
   let name = "",
     surname = "",
     dateOfBirth = "",
@@ -26,7 +27,7 @@
 </script>
 
 <Page>
-  <br>
+  <br />
   <Block inset outlineIos class="center">
     <div id="app">
       <h3>Primary Information</h3>
