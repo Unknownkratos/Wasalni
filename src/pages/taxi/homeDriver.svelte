@@ -20,7 +20,6 @@
     Icon,
   } from "framework7-svelte";
 
-  import { onMount } from "svelte";
   import { afterUpdate } from "svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
   import WelcomePage from "../main/welcome.svelte";
@@ -44,18 +43,12 @@
 
   let currentPage = "Start";
 
-  // onMount(() => {
-  //   // After 5 seconds, switch to Page2
-  //   setTimeout(() => {
-  //     currentPage = "Welcome";
-  //   }, 5000);
-  // });
   async function changePage() {
-    // Wait for 3 seconds
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // Wait for 2 seconds
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
     currentPage = "Welcome";
-  }
+  };
 
   afterUpdate(() => {
     // Add any post-update logic here if needed
@@ -72,18 +65,13 @@
       <Icon ios="f7:add" md="material:add" />
     </Fab>
     <!-- <Start /> -->
-    <!-- <svelte:component this={currentPage} /> -->
     {#if currentPage === "Start"}
       <Start />
     {:else}
-      <Welcome />
+      <DBConnect />
     {/if}
   </div>
 </Page>
-
-<!-- <main>
-  <svelte:component this={[currentPage]} />
-</main> -->
 
 <style>
   #app {
