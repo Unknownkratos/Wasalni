@@ -30,8 +30,8 @@
   import { page } from "../essentials/showNavbar.svelte";
   import logint from "./logintest.svelte";
   import IdentityVerf from "../main/taxi/IdentityVerf.svelte";
-  import Map from "./Maptry.svelte";
-  import Maptry from "./Maptry.svelte";
+  import Map from "../main/map.svelte";
+  import Userform from '../main/user/user_form.svelte';
   import Logintest from "./logintest.svelte";
   import Login from "../main/login.svelte";
   import TripConfig from "../main/user/trip_config.svelte";
@@ -44,8 +44,8 @@
   let currentPage = "Start";
 
   async function changePage() {
-    // Wait for 2 seconds
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Wait for 1 seconds
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     currentPage = "Welcome";
   };
@@ -64,11 +64,10 @@
     <Fab position="center-bottom" text="Wasalni" color="yellow">
       <Icon ios="f7:add" md="material:add" />
     </Fab>
-    <!-- <Start /> -->
     {#if currentPage === "Start"}
       <Start />
     {:else}
-      <DBConnect />
+      <Welcome />
     {/if}
   </div>
 </Page>

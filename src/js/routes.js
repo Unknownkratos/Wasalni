@@ -15,6 +15,7 @@ import Taxiform from '../pages/main/taxi/taxi_form.svelte';
 import Taxiform1 from '../pages/main/taxi/form.svelte';
 import Startup from '../pages/main/user/start.svelte';
 import Login from '../pages/main/login.svelte';
+import Map from '../pages/main/map.svelte';
 import PrimaryInfo from "../pages/main/taxi/primary_info.svelte";
 import TaxiLicense from "../pages/main/taxi/taxi_license.svelte";
 import TripConfig from "../pages/main/user/trip_config.svelte";
@@ -47,6 +48,10 @@ var routes = [
   {
     path: '/login/',
     component: Login,
+  },
+  {
+    path: '/map/',
+    component: Map,
   },
   {
     path: '/form/',

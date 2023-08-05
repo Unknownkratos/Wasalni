@@ -1,7 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import L from "leaflet";
   import "leaflet/dist/leaflet.css";
+  import L from "leaflet";
+  import { Block, Page, Navbar } from "framework7-svelte";
+  import WasalniNavBar from "../essentials/fixNavbar.svelte";
 
   onMount(() => {
     // Create a map instance
@@ -18,7 +20,14 @@
   });
 </script>
 
-<div id="map" />
+<Page>
+  <br>
+  <!-- <Navbar title="Map" backLink="Back" /> -->
+  <WasalniNavBar />
+  <Block>
+    <div id="map" />
+  </Block>
+</Page>
 
 <style>
   #map {
