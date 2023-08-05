@@ -1,10 +1,19 @@
 <script>
   import { Page, Navbar, Block, Button } from "framework7-svelte";
-  let showButtons = false;
+  let showButtons = false,
+    phone = localStorage.getItem("phoneNumber"),
+    href = "";
+
+  if (phone === null) {
+    href = "/signup/";
+  } else {
+    href = "/map/";
+  }
 
   function toggleButtons() {
     showButtons = !showButtons;
   }
+  // localStorage.clear();
 </script>
 
 <Page style="background-color: hsl(48, 85%, 50%);">
@@ -19,7 +28,6 @@
       alt="Wasalni Logo"
       style="width: 100px; height: 100px; position: relative; bottom: -280px; left:30%;"
     />
-
     <Button
       class="center"
       style="font-size: 10px; padding: 4px 8px; min-width: 50px; position: relative; bottom: -350px; background-color :hsl(211, 78%, 23%)"
@@ -27,7 +35,7 @@
       outline
       inset
       color="white"
-      href="/signup/"
+      {href}
     >
       Enter
     </Button>

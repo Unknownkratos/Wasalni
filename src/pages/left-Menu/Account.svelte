@@ -1,19 +1,18 @@
 <script>
   import Image from "../../../public/img/test.jpg";
   import { Page, Navbar, Block, BlockTitle } from "framework7-svelte";
-  /*    {`${user.firstName} ${user.lastName}`}  */
   let rate = 4.7;
   let Tours = 3250;
   let years = 2.5;
   let f_name = "";
-  let s_name = "Mohsen";
-  let number = localStorage.getItem("phoneNumber");
+  let s_name = "";
+  let phone = localStorage.getItem("phoneNumber");
   let data = {};
 
   async function getData(phone) {
     try {
       const response = await fetch(
-        `http://wasalni.apidb.ovh/api/content/items/Test?filter={phone:"${phone}"}`,
+        `http://wasalni.apidb.ovh/api/content/items/Customers?filter={phone:"${phone}"}`,
         {
           method: "GET",
           headers: {
@@ -30,7 +29,7 @@
     }
   }
   // Calling the function to fetch Cockpit data
-  getData(number);
+  getData(phone);
 </script>
 
 <Page>
@@ -80,7 +79,7 @@
 
       <p>{f_name}</p>
       <p>{s_name}</p>
-      <p>{number}</p>
+      <p>{phone}</p>
     </div>
   </Block>
 </Page>

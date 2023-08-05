@@ -18,7 +18,7 @@
   async function sendPostRequest(phone, name, surname) {
     try {
       const response = await fetch(
-        "http://wasalni.apidb.ovh/api/content/item/Test",
+        "http://wasalni.apidb.ovh/api/content/item/Customers",
         {
           method: "POST",
           headers: {
@@ -27,7 +27,6 @@
           },
           body: JSON.stringify({
             data: {
-              _state: 1,
               phone: phone,
               name: name,
               surname: surname,
