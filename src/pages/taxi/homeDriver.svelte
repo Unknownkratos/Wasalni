@@ -61,9 +61,9 @@
     {#if $page}
       <WasalniNavBar />
     {/if}
-    <Fab position="center-bottom" text="Wasalni" color="yellow">
+    <!-- <Fab position="center-bottom" text="Wasalni" color="yellow">
       <Icon ios="f7:add" md="material:add" />
-    </Fab>
+    </Fab> -->
     {#if currentPage === "Start"}
       <Start />
     {:else}

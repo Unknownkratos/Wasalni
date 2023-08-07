@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import "leaflet/dist/leaflet.css";
   import L from "leaflet";
-  import { Block, Page, Navbar } from "framework7-svelte";
+  import { Block, Page, Navbar, Fab, Icon } from "framework7-svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
 
   onMount(() => {
@@ -22,16 +22,20 @@
 
 <Page>
   <br>
+
   <!-- <Navbar title="Map" backLink="Back" /> -->
   <WasalniNavBar />
   <Block>
     <div id="map" />
+    <Fab position="center-bottom" text="Wasalni" color="yellow">
+      <Icon ios="f7:add" md="material:add" />
+    </Fab>
   </Block>
 </Page>
 
 <style>
   #map {
     width: 100%;
-    height: 655px;
+    height: 720px;
   }
 </style>
