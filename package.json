@@ -38,6 +38,7 @@
     "leaflet": "^1.9.4",
     "material-icons": "^1.13.8",
     "skeleton-elements": "^4.0.1",
+    "socket.io-client": "^4.7.2",
     "svelte": "^4.0.5",
     "swiper": "^10.0.4"
   },
