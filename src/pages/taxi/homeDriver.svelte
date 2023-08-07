@@ -41,6 +41,7 @@
   import Enter from "../main/enter.svelte";
   import DBConnect from "../essentials/dbconnect.svelte";
 
+
   let currentPage = "Start";
 
   async function changePage() {
