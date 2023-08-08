@@ -12,10 +12,6 @@
   } from 'framework7-svelte';
 </script>
 
-
-<!-- Left panel with cover effect when hidden -->
-<!-- visibleBreakpoint={1060} -->
-
 <Panel left reveal dark >
   <View>
     <Page>
@@ -34,8 +30,6 @@
 
 
 
-        <ListItem link="/form/" view=".view-main" panelClose title="Form"/>
-        <ListItem link="#" view=".view-main" back panelClose title="Back in history"/>
       </List>
     </Page>
   </View>
