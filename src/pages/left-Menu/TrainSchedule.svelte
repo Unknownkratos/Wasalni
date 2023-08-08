@@ -2,8 +2,8 @@
   import { Navbar, Page, BlockTitle } from 'framework7-svelte';
 
   // Define your variables here (assuming these are arrays)
-  let itemDates = ["14:00", "22 DEC", "22 DEC", "22 DEC", "22 DEC", "22 DEC"];
-  let stations = ["Mahdia", "Sousse", "Station 3", "Station 4", "Station 5", "Station 6"];
+  let itemDates = ["Sousse", "22:00", "23:00", "16:00", "18:00", "22 DEC"];
+  let stations = ["Mahdia", "14:00", "15:00", "17:00", "19:00", "Station 6"];
 </script>
 
 <Page>
