@@ -23,8 +23,8 @@
         <ListItem link="/FAQ/" view=".view-main" panelClose title="FAQ"/>
         <ListItem link="/Privacy&Policy/" view=".view-main" panelClose title="Privacy&Policy"/>
         <ListItem link="/Messages/" view=".view-main" panelClose title="Messages"/>
-        <ListItem link="/Bus Schedule/" view=".view-main" panelClose title="Bus Schedule"/>
-        <ListItem link="/Train Schedule/" view=".view-main" panelClose title="Train Schedule"/>
+        <ListItem link="/BusSchedule/" view=".view-main" panelClose title="Bus Schedule"/>
+        <ListItem link="/TrainSchedule/" view=".view-main" panelClose title="Train Schedule"/>
         <ListItem link="/about/" view=".view-main" panelClose title="About"/>
 
 
