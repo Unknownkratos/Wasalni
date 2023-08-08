@@ -20,6 +20,26 @@
       { name: 'Station D', time: '12:45 PM' },
     ];
   }
+  async function sendGetRequest(trainScheduleId) {
+  try {
+    const response = await fetch(
+      `http://wasalni.apidb.ovh/api/collections/get/TrainSchedules?filter[_id]=${trainScheduleId}`,
+      {
+        method: "GET",
+        headers: {
+          "api-key": "USR-34995f44f1393a63cc229c5ee9dae473fb194b42",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const data = await response.json();
+    console.log("Success:", data);
+    // Process the data as needed
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
 </script>
 
 <Page name="directions">
