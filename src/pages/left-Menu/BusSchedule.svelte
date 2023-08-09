@@ -7,37 +7,13 @@
   let currentLocation = { latitude: 35.77357411124573, longitude: 10.8236195434839 }; // Default location
 
   const otherMarkers = [
-    { id: 2, latitude: 35.75, longitude: 10.8 },
-    { id: 3, latitude: 35.7, longitude: 10.85 },
-    { id: 4, latitude: 35.75, longitude: 10.8 },
-    { id: 5, latitude: 35.7, longitude: 10.85 },
-    { id: 6, latitude: 35.75, longitude: 10.8 },
-    { id: 7, latitude: 35.7, longitude: 10.85 },
-    { id: 8, latitude: 35.75, longitude: 10.8 },
-    { id: 9, latitude: 35.7, longitude: 10.85 },
-    { id: 10, latitude: 35.75, longitude: 10.8 },
-    { id: 11, latitude: 35.7, longitude: 10.85 },
-    { id: 12, latitude: 35.75, longitude: 10.8 },
-    { id: 13, latitude: 35.7, longitude: 10.85 },
-    { id: 14, latitude: 35.75, longitude: 10.8 },
-    { id: 15, latitude: 35.7, longitude: 10.85 },
-    { id: 16, latitude: 35.75, longitude: 10.8 },
-    { id: 17, latitude: 35.7, longitude: 10.85 },
-    { id: 18, latitude: 35.75, longitude: 10.8 },
-    { id: 19, latitude: 35.7, longitude: 10.85 },
-    { id: 20, latitude: 35.75, longitude: 10.8 },
-    { id: 21, latitude: 35.7, longitude: 10.85 },
-    { id: 22, latitude: 35.75, longitude: 10.8 },
-    { id: 23, latitude: 35.7, longitude: 10.85 },
-    { id: 24, latitude: 35.75, longitude: 10.8 },
-    { id: 25, latitude: 35.7, longitude: 10.85 },
-    { id: 26, latitude: 35.75, longitude: 10.8 },
-    { id: 27, latitude: 35.7, longitude: 10.85 },
-    { id: 28, latitude: 35.75, longitude: 10.8 },
-    { id: 29, latitude: 35.7, longitude: 10.85 },
-    { id: 30, latitude: 35.75, longitude: 10.8 },
-    { id: 31, latitude: 35.7, longitude: 10.85 },
-    { id: 32, latitude: 35.75, longitude: 10.8 },
+    { id: 2, latitude: 35.824675334462064, longitude: 10.641686036333907},
+    { id: 3, latitude: 35.817712247970874, longitude: 10.642496170215761 },
+    { id: 4, latitude: 35.802281857476295, longitude: 10.649138301056135},
+    { id: 5, latitude: 35.78254118536177, longitude: 10.669262982536281 },
+    { id: 6, latitude: 35.76151030717877, longitude: 10.715260989814889 },
+    { id: 7, latitude: 35.762781361763174, longitude: 10.74456903150163},
+    { id: 8, latitude: 35.76612433619074, longitude:10.755212037291695},
   ];
 
   onMount(() => {
@@ -56,6 +32,11 @@
     // Add markers
     addMarkers(map);
   });
+// Add current location marker with blue icon
+L.marker([currentLocation.latitude, currentLocation.longitude], { icon: blueIcon })
+  .addTo(map)
+  .on("click", () => alert("Marker clicked"));
+
 
   function addMarkers(map) {
     // Add current location marker
