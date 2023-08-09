@@ -4,16 +4,15 @@
   import { Block, Page } from "framework7-svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
 
-  let currentLocation = { latitude: 35.77357411124573, longitude: 10.8236195434839 }; // Default location
+  let currentLocation = { latitude: 35.6894634389637, longitude: 10.840351068182589 }; // Default location
 
   const otherMarkers = [
     { id: 2, latitude: 35.824675334462064, longitude: 10.641686036333907},
-    { id: 3, latitude: 35.817712247970874, longitude: 10.642496170215761 },
+    { id: 3, latitude: 35.686456595938296, longitude: 10.842265948061161 },
     { id: 4, latitude: 35.802281857476295, longitude: 10.649138301056135},
     { id: 5, latitude: 35.78254118536177, longitude: 10.669262982536281 },
     { id: 6, latitude: 35.76151030717877, longitude: 10.715260989814889 },
     { id: 7, latitude: 35.762781361763174, longitude: 10.74456903150163},
-    { id: 8, latitude: 35.76612433619074, longitude:10.755212037291695},
   ];
 
   onMount(() => {
@@ -32,11 +31,6 @@
     // Add markers
     addMarkers(map);
   });
-// Add current location marker with blue icon
-L.marker([currentLocation.latitude, currentLocation.longitude], { icon: blueIcon })
-  .addTo(map)
-  .on("click", () => alert("Marker clicked"));
-
 
   function addMarkers(map) {
     // Add current location marker
