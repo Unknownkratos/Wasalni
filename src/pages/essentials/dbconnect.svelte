@@ -5,23 +5,23 @@
   const API_KEY = "USR-34995f44f1393a63cc229c5ee9dae473fb194b42";
   let data = {};
 
-  onMount(async () => {
-    try {
-      const response = await axios.get(
-        "http://wasalni.apidb.ovh/api/content/items/Test",
-        {
-          headers: {
-            "api-key": `${API_KEY}`,
-          },
-        }
-      );
-      data = response.data;
-      console.log("Success", data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-    // data.push({ phone: 20600505, _id: "64c922800f869e9f530b6101", _state: 1 });
-  });
+  // onMount(async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "http://wasalni.apidb.ovh/api/content/items/Test",
+  //       {
+  //         headers: {
+  //           "api-key": `${API_KEY}`,
+  //         },
+  //       }
+  //     );
+  //     data = response.data;
+  //     console.log("Success", data);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  //   // data.push({ phone: 20600505, _id: "64c922800f869e9f530b6101", _state: 1 });
+  // });
 
   async function sendData(phone) {
     try {
@@ -82,26 +82,29 @@
   }
 
   // Calling the function to fetch Cockpit data
-  getData("34567888");
+  // getData("34567888");
+
   let stationData = null;
 
   async function fetchStationData() {
     try {
-      const response = await fetch('http://api.wasalni.tn/api/wasalni/stations/mean/1');
-      
+      const response = await fetch(
+        "http://api.wasalni.tn/api/wasalni/stations/mean/1"
+      );
+
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
-      
+
       const data = await response.json();
       stationData = data;
-      console.log("Success:",stationData);
+      console.log("Success:", stationData);
     } catch (error) {
-      console.error('Error fetching station data:', error);
+      console.error("Error fetching station data:", error);
     }
   }
 
-  fetchStationData();
+  // fetchStationData();
 </script>
 
 <main>

@@ -4,15 +4,18 @@
   import { Block, Page } from "framework7-svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
 
-  let currentLocation = { latitude: 35.6894634389637, longitude: 10.840351068182589 }; // Default location
+  let currentLocation = {
+    latitude: 35.6894634389637,
+    longitude: 10.840351068182589,
+  }; // Default location
 
   const otherMarkers = [
-    { id: 2, latitude: 35.824675334462064, longitude: 10.641686036333907},
+    { id: 2, latitude: 35.824675334462064, longitude: 10.641686036333907 },
     { id: 3, latitude: 35.686456595938296, longitude: 10.842265948061161 },
-    { id: 4, latitude: 35.802281857476295, longitude: 10.649138301056135},
+    { id: 4, latitude: 35.802281857476295, longitude: 10.649138301056135 },
     { id: 5, latitude: 35.78254118536177, longitude: 10.669262982536281 },
     { id: 6, latitude: 35.76151030717877, longitude: 10.715260989814889 },
-    { id: 7, latitude: 35.762781361763174, longitude: 10.74456903150163},
+    { id: 7, latitude: 35.762781361763174, longitude: 10.74456903150163 },
   ];
 
   onMount(() => {
@@ -39,7 +42,7 @@
       .on("click", () => alert("Marker clicked"));
 
     // Add other markers
-    otherMarkers.forEach(marker => {
+    otherMarkers.forEach((marker) => {
       L.marker([marker.latitude, marker.longitude])
         .addTo(map)
         .on("click", () => alert(`Marker ${marker.id} clicked`));
@@ -51,7 +54,7 @@
       const position = await getCurrentPosition();
       currentLocation = {
         latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+        longitude: position.coords.longitude,
       };
     } catch (error) {
       console.error("Error getting position:", error);

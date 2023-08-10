@@ -21,12 +21,12 @@
     <img
       src="img/logo.svg"
       alt="Wasalni Logo"
-      style="width: 100px; height: 100px; position: relative; bottom: -150px; left:45%;"
+      style="width: 100px; height: 100px; position: relative; bottom: -150px; left:37%;"
     />
     <img
       src="img/Text.svg"
       alt="Wasalni Logo"
-      style="width: 100px; height: 100px; position: relative; bottom: -280px; left:30%;"
+      style="width: 100px; height: 100px; position: relative; bottom: -280px; left:5%;"
     />
     <Button
       class="center"

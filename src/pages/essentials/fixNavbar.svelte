@@ -16,6 +16,10 @@
   <NavLeft>
     <Link iconIos="f7:menu" iconMd="material:menu" panelOpen="left" />
   </NavLeft>
-  <NavTitleLarge>Wasalni</NavTitleLarge>
+  <img
+    src="img/Text.svg"
+    alt="Wasalni Logo"
+    style="width: 120px; height: 120px; position: relative left:-20px"
+  />
   <NavRight />
 </Toolbar>
