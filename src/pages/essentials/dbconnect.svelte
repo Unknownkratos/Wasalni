@@ -83,6 +83,25 @@
 
   // Calling the function to fetch Cockpit data
   getData("34567888");
+  let stationData = null;
+
+  async function fetchStationData() {
+    try {
+      const response = await fetch('http://api.wasalni.tn/api/wasalni/stations/mean/1');
+      
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      
+      const data = await response.json();
+      stationData = data;
+      console.log("Success:",stationData);
+    } catch (error) {
+      console.error('Error fetching station data:', error);
+    }
+  }
+
+  fetchStationData();
 </script>
 
 <main>

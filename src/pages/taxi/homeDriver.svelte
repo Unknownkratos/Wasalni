@@ -68,7 +68,7 @@
     {#if currentPage === "Start"}
       <Start />
     {:else}
-      <Welcome />
+      <DBConnect/>
     {/if}
   </div>
 </Page>
