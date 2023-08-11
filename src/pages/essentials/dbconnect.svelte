@@ -84,8 +84,6 @@
   // Calling the function to fetch Cockpit data
   // getData("34567888");
 
-  let stationData = null;
-
   async function fetchStationData() {
     try {
       const response = await fetch(
@@ -96,15 +94,14 @@
         throw new Error("Network response was not ok");
       }
 
-      const data = await response.json();
-      stationData = data;
-      console.log("Success:", stationData);
+      const obj = await response.json();
+      console.log("Success:", obj.data);
     } catch (error) {
       console.error("Error fetching station data:", error);
     }
   }
 
-  // fetchStationData();
+  fetchStationData();
 </script>
 
 <main>

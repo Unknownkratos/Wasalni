@@ -5,6 +5,7 @@ import Messages from '../pages/left-Menu/Messages.svelte';
 import Privacy from '../pages/left-Menu/Privacy&Policy.svelte';
 import Bus from '../pages/left-Menu/BusSchedule.svelte';
 import Train from '../pages/left-Menu/TrainSchedule.svelte';
+import TimeLine from '../pages/left-Menu/TimeLine.svelte';
 import FAQ from '../pages/left-Menu/FAQ.svelte';
 import Settings from '../pages/left-Menu/Settings.svelte';
 import SignUp from '../pages/main/signUp.svelte';
@@ -72,6 +73,10 @@ var routes = [
   {
     path: '/BusSchedule/',
     component: Bus,
+  },
+  {
+    path: '/TimeLine/',
+    component: TimeLine,
   },
   {
     path: '/Privacy&Policy/',
