@@ -1,13 +1,9 @@
 <script>
   import { onMount } from "svelte";
-  import { Geolocation } from "@capacitor/geolocation";
   import L from "leaflet";
   import { Block, Page } from "framework7-svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
-  export let f7router;
-
-  let obj;
-
+  
   onMount(async () => {
     // Create a map instance
     const map = L.map("map").setView([35.66, 10.85], 12);

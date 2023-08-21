@@ -56,7 +56,7 @@
 </script>
 
 <Page>
-  <br />
+  <br>
 
   <!-- <Navbar title="Map" backLink="Back" /> -->
   <WasalniNavBar />
