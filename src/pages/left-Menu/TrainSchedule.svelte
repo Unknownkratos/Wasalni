@@ -1,9 +1,13 @@
 <script>
   import { onMount } from "svelte";
+  import { Geolocation } from "@capacitor/geolocation";
   import L from "leaflet";
   import { Block, Page } from "framework7-svelte";
   import WasalniNavBar from "../essentials/fixNavbar.svelte";
-  
+  export let f7router;
+
+  let obj;
+
   onMount(async () => {
     // Create a map instance
     const map = L.map("map").setView([35.66, 10.85], 12);
@@ -20,7 +24,7 @@
         throw new Error("Network response was not ok");
       }
       obj = await response.json();
-      console.log(obj.data);
+      // console.log(obj.data);
     } catch (error) {
       console.error("Error fetching station data:", error);
     }
@@ -28,7 +32,7 @@
     // Update current location variable every 5 seconds
     // setInterval(updateCurrentLocation, 5000);
 
-    getCurrentPosition(map);
+    // getCurrentPosition(map);
 
     addMarkers(map);
   });

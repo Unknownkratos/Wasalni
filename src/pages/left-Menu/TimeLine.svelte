@@ -3,38 +3,88 @@
   import { Navbar, Page, Block, Button, BlockTitle } from "framework7-svelte";
 
   let sName = sessionStorage.getItem("sName");
-  // Define your variables here (assuming these are arrays)
-  let itemDates = ["Sousse", "22:00", "23:00", "16:00", "18:00", "22 DEC"];
-  let stations = ["Mahdia", "14:00", "15:00", "17:00", "19:00", "Station 6"];
+  var mehdiaHours = [];
+  var sousseHours = [];
 
   onMount(async () => {
+    [mehdiaHours, sousseHours] = await getHours();
+    console.log(mehdiaHours);
+    console.log(sousseHours);
+  });
+
+  async function getHours() {
+    const mehdiaHours = [];
+    const sousseHours = [];
     try {
       const response = await fetch(
         "http://api.wasalni.tn/api/wasalni/stations/mean/1?include=triptimes"
       );
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      const stations = await response.json();
+      for (let i = 0; i < stations.data.length; i++) {
+        if (stations.data[i].name === sName) {
+          for (
+            let j = 0;
+            j < stations.data[i].triptimes.data[0].times.length;
+            j++
+          ) {
+            mehdiaHours.push(
+              stations.data[i].triptimes.data[0].times[j].time.substring(11, 16)
+            );
+          }
+
+          for (
+            let j = 0;
+            j < stations.data[i].triptimes.data[1].times.length;
+            j++
+          ) {
+            sousseHours.push(
+              stations.data[i].triptimes.data[1].times[j].time.substring(11, 16)
+            );
+          }
+        }
       }
-      const obj = await response.json();
-      console.log(obj.data);
+      return [mehdiaHours, sousseHours];
     } catch (error) {
-      console.error("Error fetching station data:", error);
+      console.error("Error fetching data:", error);
     }
-  });
+  }
 </script>
 
 <Page>
-  <Navbar title="TimeLine" backLink="./TrainSchedule.svelte" />
+  <Navbar title="TimeLine" backLink="Back" />
   <BlockTitle>Train Schedule for {sName}</BlockTitle>
   <div class="timeline timeline-sides">
-    {#each itemDates as date, i}
-      <div class="timeline-item">
-        <div class="timeline-item-date">{date} <small /></div>
-        <div class="timeline-item-divider" />
-        <div class="timeline-item-content">
-          <div class="timeline-item-inner">{stations[i]}</div>
-        </div>
+    <div class="timeline-item">
+      <div
+        class="timeline-item-date"
+        style="background-color:LightSteelBlue;
+                padding:2px;
+                border-radius:10px;
+                height:28px;"
+      >
+        Mehdia
       </div>
+      <div class="timeline-item-divider" />
+      <div
+        class="timeline-item-content"
+        style="background-color:LightSteelBlue;
+                padding:3px;
+                border-radius:10px;"
+      >
+        Sousse
+      </div>
+    </div>
+    {#each { length: mehdiaHours.length } as _, i}
+      <div class="timeline-item timeline-item-right">
+        <div class="timeline-item-date">{mehdiaHours[i]}</div>
+        <div class="timeline-item-divider" />
+      </div>
+      {#if sousseHours[i] != undefined}
+        <div class="timeline-item timeline-item-left">
+          <div class="timeline-item-date">{sousseHours[i]}</div>
+          <div class="timeline-item-divider" />
+        </div>
+      {/if}
     {/each}
   </div>
 </Page>
